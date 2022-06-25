@@ -9,10 +9,10 @@ const sentence = "hello there from lighthouse labs";
 // // }
 
 let delay = 0;
-
-for (const char of sentence) {
+const newSentence = sentence + "\n";
+for (const char of newSentence) {
+  delay += 50;
   setTimeout(() => {
     process.stdout.write(char);
   }, delay);
-  delay += 50;
 }
